@@ -1,0 +1,769 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playwrite AU NSW", cursive;
+  font-weight: 400;
+}
+
+.osnova {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(23, 33, 43);
+}
+.osnova .osmova__korobka {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.osnova .osmova__korobka .osnova__suptext {
+  color: rgb(245, 245, 245);
+  font-size: 1.5em;
+}
+.osnova .osmova__korobka .osnova__input {
+  width: 350px;
+  position: relative;
+}
+.osnova .osmova__korobka .osnova__input .osnova__input_1 {
+  width: 250px;
+  padding: 10px 0;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 1.5em;
+  border-bottom: 1px solid gray;
+  transition: 0.3s;
+  background-color: transparent;
+  color: rgb(245, 245, 245);
+}
+.osnova .osmova__korobka .osnova__input .osnova__input_1:focus {
+  border-color: rgb(47, 110, 165);
+}
+.osnova .osmova__korobka .osnova__input .label__input {
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: 9px;
+  font-size: 19px;
+  color: gray;
+  pointer-events: none;
+  transform-origin: left;
+  transform: 0.3s easy;
+}
+.osnova .osmova__korobka .osnova__input .osnova__input_1:focus + .label__input,
+.osnova .osmova__korobka .osnova__input .osnova__input_1:not(:focus):valid + .label__input {
+  top: -15px;
+  transform: scale(0.85);
+  color: rgb(47, 110, 165);
+  border-color: rgb(47, 110, 165);
+}
+.osnova .osmova__korobka .osnova__buttons {
+  display: flex;
+  flex-direction: column;
+}
+.osnova .osmova__korobka .osnova__buttons .osnova__button_1 {
+  background-color: rgb(47, 110, 165);
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  color: rgb(245, 245, 245);
+}
+.osnova .osmova__korobka .osnova__buttons .osnova__button_2 {
+  color: rgb(47, 110, 165);
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+}
+
+.pasro {
+  background-color: rgb(23, 33, 43);
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.blok {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background: url(../jpg/back.jpeg) no-repeat;
+  background-size: cover;
+}
+.blok .left {
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.304);
+  width: 50%;
+  height: 100vh;
+  background-image: url(../jpg/chap.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.blok .left .tepa {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(23, 33, 43);
+}
+.blok .left .tepa .chap {
+  display: flex;
+  gap: 20px;
+}
+.blok .left .tepa .chap .bir {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.blok .left .tepa .chap .bir .back {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+.blok .left .tepa .chap .bir .back:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .left .tepa .chap .ikki {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .left .tepa .chap .ikki .ava {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.blok .left .tepa .chap .ikki .ava:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .left .tepa .chap .uch {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .left .tepa .chap .uch .nick_1 {
+  color: white;
+  font-size: 1.2em;
+}
+.blok .left .tepa .chap .uch .nick_1:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .left .tepa .ong {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.blok .left .tepa .ong .bir {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .left .tepa .ong .bir .poisk {
+  width: 25px;
+  height: 25px;
+}
+.blok .left .tepa .ong .bir .poisk:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .left .tepa .ong .ikki {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .left .tepa .ong .ikki .tel {
+  width: 25px;
+  height: 25px;
+}
+.blok .left .tepa .ong .ikki .tel:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .left .tepa .ong .uch {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .left .tepa .ong .uch .menu {
+  width: 28px;
+  height: 28px;
+}
+.blok .left .tepa .ong .uch .menu:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .left .orta {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: calc(100vh - 140px);
+  padding: 10px;
+}
+.blok .left .orta .orta1 {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+.blok .left .orta .orta1::-webkit-scrollbar {
+  border-radius: 50px;
+  width: 5px;
+  border: 1px solid white;
+  background-color: gray;
+}
+.blok .left .orta .orta1::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(47, 110, 165), rgb(47, 110, 165));
+}
+.blok .left .orta .orta1 .vremya {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 2px 5px;
+  text-align: end;
+  align-self: flex-end;
+  font-size: 10px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+.blok .left .orta .orta1 .righ {
+  word-wrap: break-word;
+  max-width: 50%;
+  width: 100%;
+  background-color: rgb(47, 110, 165);
+  border: 1px solid transparent;
+  border-radius: 14px;
+  display: block;
+  padding: 2px 5px;
+  width: auto;
+  height: auto;
+  align-self: flex-end;
+  text-align: end;
+}
+.blok .left .orta .orta1 .lef {
+  display: block;
+  background-color: aquamarine;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  max-width: 50%;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  display: block;
+  padding: 2px 5px;
+  align-self: flex-start;
+  text-align: start;
+}
+.blok .left .past {
+  background-color: rgb(23, 33, 43);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.blok .left .past .bir {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  align-items: center;
+}
+.blok .left .past .bir .jonat {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.blok .left .past .bir #file {
+  display: none;
+}
+.blok .left .past .ikki {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+.blok .left .past .ikki .habar {
+  cursor: pointer;
+  width: 100%;
+  color: rgb(245, 245, 245);
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid gray;
+  outline: none;
+  font-size: 0.8em;
+}
+.blok .left .past .uch {
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+.blok .left .past .uch .zaebbal {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.blok .left .past .uch .zaebbal:active {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .left .past .uch .emodjila {
+  position: absolute;
+  top: -190px;
+  cursor: pointer;
+  flex-direction: column;
+}
+.blok .left .past .uch .emodjila:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .left .past .uch .emodjila .qator {
+  display: flex;
+  width: 50px;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.blok .left .past .uch .emodjila .qator .q1,
+.blok .left .past .uch .emodjila .qator .q2,
+.blok .left .past .uch .emodjila .qator .q3,
+.blok .left .past .uch .emodjila .qator .q4,
+.blok .left .past .uch .emodjila .qator .q5,
+.blok .left .past .uch .emodjila .qator .q6,
+.blok .left .past .uch .emodjila .qator .q7,
+.blok .left .past .uch .emodjila .qator .q8,
+.blok .left .past .uch .emodjila .qator .q9,
+.blok .left .past .uch .emodjila .qator .q10 {
+  font-size: 18px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.blok .left .past .tort {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .left .past .tort .sent {
+  width: 30px;
+  height: 30px;
+}
+.blok .right {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.304);
+  width: 50%;
+  height: 100vh;
+  background-image: url(../jpg/ong.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.blok .right .tepa {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(23, 33, 43);
+}
+.blok .right .tepa .chap {
+  display: flex;
+  gap: 20px;
+}
+.blok .right .tepa .chap .bir {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.blok .right .tepa .chap .bir .back {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+.blok .right .tepa .chap .bir .back:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .right .tepa .chap .ikki {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .right .tepa .chap .ikki .ava {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.blok .right .tepa .chap .ikki .ava:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .right .tepa .chap .uch {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .right .tepa .chap .uch .nick_1 {
+  color: white;
+  font-size: 1.2em;
+}
+.blok .right .tepa .chap .uch .nick_1:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .right .tepa .ong {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.blok .right .tepa .ong .bir {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .right .tepa .ong .bir .poisk {
+  width: 25px;
+  height: 25px;
+}
+.blok .right .tepa .ong .bir .poisk:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .right .tepa .ong .ikki {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .right .tepa .ong .ikki .tel {
+  width: 25px;
+  height: 25px;
+}
+.blok .right .tepa .ong .ikki .tel:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .right .tepa .ong .uch {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .right .tepa .ong .uch .menu {
+  width: 28px;
+  height: 28px;
+}
+.blok .right .tepa .ong .uch .menu:hover {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .right .center {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: calc(100vh - 140px);
+  padding: 10px;
+}
+.blok .right .center .center1 {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+.blok .right .center .center1::-webkit-scrollbar {
+  border-radius: 50px;
+  width: 5px;
+  border: 1px solid white;
+  background-color: gray;
+}
+.blok .right .center .center1::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(47, 110, 165), rgb(47, 110, 165));
+}
+.blok .right .center .center1 .vremya {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 2px 5px;
+  text-align: end;
+  align-self: flex-end;
+  font-size: 10px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+.blok .right .center .center1 .righ {
+  min-width: 100px;
+  background-color: rgb(47, 110, 165);
+  border: 1px solid transparent;
+  border-radius: 14px;
+  display: block;
+  padding: 2px 5px;
+  width: auto;
+  height: auto;
+  align-self: flex-end;
+  text-align: end;
+}
+.blok .right .center .center1 .lef {
+  display: block;
+  background-color: rgb(255, 255, 255);
+  padding: 2px 5px;
+  width: auto;
+  height: auto;
+  align-self: flex-start;
+  text-align: end;
+}
+.blok .right .past {
+  background-color: rgb(23, 33, 43);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.blok .right .past .bir {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  align-items: center;
+}
+.blok .right .past .bir .jonat {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.blok .right .past .bir #file {
+  display: none;
+}
+.blok .right .past .ikki {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+.blok .right .past .ikki .habba {
+  cursor: pointer;
+  width: 100%;
+  color: rgb(245, 245, 245);
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid gray;
+  outline: none;
+  font-size: 0.8em;
+}
+.blok .right .past .uch {
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+.blok .right .past .uch .zaebbal {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+.blok .right .past .uch .emodjila2 {
+  position: absolute;
+  top: -190px;
+  cursor: pointer;
+  flex-direction: column;
+}
+.blok .right .past .uch .emodjila2 .qator2 {
+  display: flex;
+  width: 50px;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.blok .right .past .uch .emodjila2 .qator2 .q12,
+.blok .right .past .uch .emodjila2 .qator2 .q22,
+.blok .right .past .uch .emodjila2 .qator2 .q32,
+.blok .right .past .uch .emodjila2 .qator2 .q42,
+.blok .right .past .uch .emodjila2 .qator2 .q52,
+.blok .right .past .uch .emodjila2 .qator2 .q62,
+.blok .right .past .uch .emodjila2 .qator2 .q72,
+.blok .right .past .uch .emodjila2 .qator2 .q82,
+.blok .right .past .uch .emodjila2 .qator2 .q92,
+.blok .right .past .uch .emodjila2 .qator2 .q102 {
+  font-size: 18px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.blok .right .past .tort {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.blok .right .past .tort .sent2 {
+  width: 30px;
+  height: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.vremya2 {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 2px 5px;
+  text-align: end;
+  align-self: flex-start;
+  font-size: 10px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+.vremya9 {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 2px 5px;
+  text-align: end;
+  align-self: flex-start;
+  font-size: 10px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+.vremya99 {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 2px 5px;
+  text-align: end;
+  align-self: flex-end;
+  font-size: 10px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+.righ9 {
+  background-color: aquamarine;
+  padding: 2px 5px;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  max-width: 50%;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  display: block;
+  padding: 2px 5px;
+  align-self: flex-start;
+  text-align: start;
+}
+
+.righ99 {
+  background-color: rgb(47, 110, 165);
+  padding: 2px 5px;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  max-width: 50%;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  display: block;
+  padding: 2px 5px;
+  align-self: flex-end;
+  text-align: start;
+}
+
+.lef99 {
+  display: block;
+  background-color: aquamarine;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  max-width: 50%;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  display: block;
+  padding: 2px 5px;
+  align-self: flex-start;
+  text-align: start;
+}
+
+.zaebbal9 {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.zaebbal9:active {
+  animation-name: click;
+  animation-duration: 0.3s;
+}
+
+@keyframes click {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}/*# sourceMappingURL=main.css.map */

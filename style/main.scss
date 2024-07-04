@@ -1,0 +1,755 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playwrite AU NSW', cursive;
+  font-weight: 400;
+}
+.osnova {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  // display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(23, 33, 43);
+  .osmova__korobka {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    .osnova__suptext {
+      color: rgb(245, 245, 245);
+      font-size: 1.5em;
+    }
+    .osnova__input {
+      width: 350px;
+      position: relative;
+      .osnova__input_1 {
+        width: 250px;
+        padding: 10px 0;
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        appearance: none;
+        font-size: 1.5em;
+        border-bottom: 1px solid gray;
+        transition: 0.3s;
+        background-color: transparent;
+        color: rgb(245, 245, 245);
+        &:focus {
+          border-color: rgb(47, 110, 165);
+        }
+      }
+      .label__input {
+        display: block;
+        position: absolute;
+        left: -5px;
+        top: 9px;
+        font-size: 19px;
+        color: gray;
+        pointer-events: none;
+        transform-origin: left;
+        transform: 0.3s easy;
+      }
+      .osnova__input_1:focus + .label__input,
+      .osnova__input_1:not(:focus):valid + .label__input {
+        top: -15px;
+        transform: scale(0.85);
+        color: rgb(47, 110, 165);
+        border-color: rgb(47, 110, 165);
+      }
+    }
+    .osnova__buttons {
+      display: flex;
+      flex-direction: column;
+      .osnova__button_1 {
+        background-color: rgb(47, 110, 165);
+        width: 250px;
+        height: 30px;
+        border-radius: 5px;
+        outline: none;
+        border: 0;
+        color: rgb(245, 245, 245);
+      }
+      .osnova__button_2 {
+        color: rgb(47, 110, 165);
+        width: 250px;
+        height: 30px;
+        border-radius: 5px;
+        outline: none;
+        border: 0;
+        background-color: transparent;
+      }
+    }
+  }
+}
+.pasro {
+  background-color: rgb(23, 33, 43);
+  width: 100%;
+  height: 70px;
+  // display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.blok {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background: url(../jpg/back.jpeg) no-repeat;
+  background-size: cover;
+
+  .left {
+    display: flex;
+    // opacity: 0;
+    // transition: 0.3s ease-in-out;
+    // &:hover {
+    //   opacity: 1;
+    //   display: flex;
+    // }
+    user-select: none;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.304);
+    width: 50%;
+    height: 100vh;
+    background-image: url(../jpg/chap.jpeg);
+    background-position: center;
+    background-size: cover;
+    .tepa {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 70px;
+      background-color: rgb(23, 33, 43);
+      .chap {
+        display: flex;
+        gap: 20px;
+        .bir {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          .back {
+            width: 25px;
+            height: 25px;
+            color: white;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+        .ikki {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .ava {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+        .uch {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .nick_1 {
+            color: white;
+            font-size: 1.2em;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+      }
+      .ong {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .bir {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .poisk {
+            width: 25px;
+            height: 25px;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+        .ikki {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .tel {
+            width: 25px;
+            height: 25px;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+        .uch {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .menu {
+            width: 28px;
+            height: 28px;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+      }
+    }
+
+    .orta {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      height: calc(100vh - 140px);
+      padding: 10px;
+      .orta1 {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+        &::-webkit-scrollbar {
+          border-radius: 50px;
+          width: 5px;
+          border: 1px solid white;
+          background-color: gray;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: linear-gradient(rgb(47, 110, 165), rgb(47, 110, 165));
+        }
+        .vremya {
+          background-color: transparent;
+          width: auto;
+          height: auto;
+          padding: 2px 5px;
+          text-align: end;
+          align-self: flex-end;
+          font-size: 10px;
+          margin: 0 0 10px 0;
+          color: white;
+        }
+        .righ {
+          word-wrap: break-word;
+          max-width: 50%;
+          width: 100%;
+          background-color: rgb(47, 110, 165);
+          border: 1px solid transparent;
+          border-radius: 14px;
+          display: block;
+          padding: 2px 5px;
+          width: auto;
+          height: auto;
+          align-self: flex-end;
+          text-align: end;
+        }
+        .lef {
+          display: block;
+          background-color: aquamarine;
+          width: auto;
+          height: auto;
+          word-wrap: break-word;
+          max-width: 50%;
+          border: 1px solid transparent;
+          border-radius: 14px;
+          display: block;
+          padding: 2px 5px;
+          align-self: flex-start;
+          text-align: start;
+        }
+      }
+    }
+    .past {
+      background-color: rgb(23, 33, 43);
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      gap: 10px;
+      .bir {
+        user-select: none;
+        display: flex;
+        align-items: center;
+        .jonat {
+          cursor: pointer;
+
+          width: 30px;
+          height: 30px;
+        }
+        #file {
+          display: none;
+        }
+      }
+      .ikki {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        .habar {
+          cursor: pointer;
+
+          width: 100%;
+          color: rgb(245, 245, 245);
+          background-color: transparent;
+          border: 0;
+          border-bottom: 1px solid gray;
+          outline: none;
+          font-size: 0.8em;
+        }
+      }
+      .uch {
+        background-color: transparent;
+        position: relative;
+        display: flex;
+        align-items: center;
+        z-index: 0;
+        .zaebbal {
+          &:active {
+            animation-name: click;
+            animation-duration: 0.3s;
+          }
+
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          user-select: none;
+        }
+        .emodjila {
+          &:hover {
+            animation-name: click;
+            animation-duration: 0.3s;
+          }
+          position: absolute;
+          top: -190px;
+          cursor: pointer;
+          flex-direction: column;
+          .qator {
+            display: flex;
+            width: 50px;
+            flex-wrap: wrap;
+            background-color: rgb(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            .q1,
+            .q2,
+            .q3,
+            .q4,
+            .q5,
+            .q6,
+            .q7,
+            .q8,
+            .q9,
+            .q10 {
+              font-size: 18px;
+              user-select: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .tort {
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        .sent {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+  .right {
+    // transition: 0.3s ease-in-out;
+    // opacity: 0;
+    // &:hover {
+    //   opacity: 1;
+    //   display: flex;
+    // }
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.304);
+    width: 50%;
+    height: 100vh;
+    background-image: url(../jpg/ong.jpeg);
+    background-position: center;
+    background-size: cover;
+    .tepa {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 70px;
+      background-color: rgb(23, 33, 43);
+      .chap {
+        display: flex;
+        gap: 20px;
+        .bir {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          .back {
+            width: 25px;
+            height: 25px;
+            color: white;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+        .ikki {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .ava {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+        .uch {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .nick_1 {
+            color: white;
+            font-size: 1.2em;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+      }
+      .ong {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .bir {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .poisk {
+            width: 25px;
+            height: 25px;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+        .ikki {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .tel {
+            width: 25px;
+            height: 25px;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+        .uch {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          .menu {
+            width: 28px;
+            height: 28px;
+            &:hover {
+              animation-name: click;
+              animation-duration: 0.3s;
+            }
+          }
+        }
+      }
+    }
+    .center {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      height: calc(100vh - 140px);
+      padding: 10px;
+      .center1 {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+        &::-webkit-scrollbar {
+          border-radius: 50px;
+          width: 5px;
+          border: 1px solid white;
+          background-color: gray;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: linear-gradient(rgb(47, 110, 165), rgb(47, 110, 165));
+        }
+        .vremya {
+          background-color: transparent;
+          width: auto;
+          height: auto;
+          padding: 2px 5px;
+          text-align: end;
+          align-self: flex-end;
+          font-size: 10px;
+          margin: 0 0 10px 0;
+          color: white;
+        }
+        .righ {
+          min-width: 100px;
+          background-color: rgb(47, 110, 165);
+          border: 1px solid transparent;
+          border-radius: 14px;
+          display: block;
+          padding: 2px 5px;
+          width: auto;
+          height: auto;
+          align-self: flex-end;
+          text-align: end;
+        }
+        .lef {
+          display: block;
+          background-color: rgb(255, 255, 255);
+          padding: 2px 5px;
+          width: auto;
+          height: auto;
+          align-self: flex-start;
+          text-align: end;
+        }
+      }
+    }
+    .past {
+      background-color: rgb(23, 33, 43);
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      gap: 10px;
+      .bir {
+        user-select: none;
+        display: flex;
+        align-items: center;
+        .jonat {
+          cursor: pointer;
+
+          width: 30px;
+          height: 30px;
+        }
+        #file {
+          display: none;
+        }
+      }
+      .ikki {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        .habba {
+          cursor: pointer;
+          width: 100%;
+          color: rgb(245, 245, 245);
+          background-color: transparent;
+          border: 0;
+          border-bottom: 1px solid gray;
+          outline: none;
+          font-size: 0.8em;
+        }
+      }
+      .uch {
+        background-color: transparent;
+        position: relative;
+        display: flex;
+        align-items: center;
+        z-index: 0;
+        .zaebbal {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          user-select: none;
+          animation-name: click;
+          animation-duration: 0.3s;
+        }
+        .emodjila2 {
+          position: absolute;
+          top: -190px;
+          cursor: pointer;
+          flex-direction: column;
+          .qator2 {
+            display: flex;
+            width: 50px;
+            flex-wrap: wrap;
+            background-color: rgb(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            .q12,
+            .q22,
+            .q32,
+            .q42,
+            .q52,
+            .q62,
+            .q72,
+            .q82,
+            .q92,
+            .q102 {
+              font-size: 18px;
+              user-select: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .tort {
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        .sent2 {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+.vremya2 {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 2px 5px;
+  text-align: end;
+  align-self: flex-start;
+  font-size: 10px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+.vremya9 {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 2px 5px;
+  text-align: end;
+  align-self: flex-start;
+  font-size: 10px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+.vremya99 {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 2px 5px;
+  text-align: end;
+  align-self: flex-end;
+  font-size: 10px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+.righ9 {
+  background-color: aquamarine;
+  padding: 2px 5px;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  max-width: 50%;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  display: block;
+  padding: 2px 5px;
+  align-self: flex-start;
+  text-align: start;
+}
+.righ99 {
+  background-color: rgb(47, 110, 165);
+  padding: 2px 5px;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  max-width: 50%;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  display: block;
+  padding: 2px 5px;
+  align-self: flex-end;
+  text-align: start;
+}
+.lef99 {
+  display: block;
+  background-color: aquamarine;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  max-width: 50%;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  display: block;
+  padding: 2px 5px;
+  align-self: flex-start;
+  text-align: start;
+}
+.zaebbal9 {
+  &:active {
+    animation-name: click;
+    animation-duration: 0.3s;
+  }
+
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+@keyframes click {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
